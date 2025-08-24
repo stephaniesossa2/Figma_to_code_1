@@ -1,14 +1,13 @@
-# --- Netlify config pour un projet dans /frontend avec pnpm + Vite/React ---
 [build]
-  base    = "frontend"          # dossier où se trouve le package.json
-  command = "pnpm run build"    # commande de build
-  publish = "dist"              # dossier généré par Vite
+  base    = "frontend"          
+  command = "pnpm run build"    
+  publish = "dist"              
 
 [build.environment]
   NODE_VERSION = "18"
+  PNPM_VERSION = "9.0.0"
   NETLIFY_USE_PNPM = "true"
 
-# SPA/React Router : rediriger toutes les routes vers index.html
 [[redirects]]
   from = "/*"
   to = "/index.html"
